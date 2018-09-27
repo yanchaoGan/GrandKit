@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestView.h
 //  Demo
 //
 //  Created by ganyanchao on 2018/8/8.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface OtherTestView : UIView
 
-@property (weak, nonatomic) IBOutlet UIStackView *sv;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
 
 @end
-

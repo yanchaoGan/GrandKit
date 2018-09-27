@@ -12,11 +12,28 @@
 
 @end
 
+
+@interface NSObject (crash)
+
+@end
+
+@implementation NSObject (crash)
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
+    return nil;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+}
+
+@end
+
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 

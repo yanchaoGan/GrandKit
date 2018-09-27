@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3D388A21280F2E00EB609A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D388921280F2E00EB609A /* TestViewController.m */; };
+		0DB88612215A0D38006F2A72 /* UITableView+GTableStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB88611215A0D38006F2A72 /* UITableView+GTableStatic.m */; };
+		0DB88615215A0DE1006F2A72 /* GTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB88614215A0DE1006F2A72 /* GTableSection.m */; };
+		0DB88618215A0DFB006F2A72 /* GTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB88617215A0DFB006F2A72 /* GTableCell.m */; };
+		0DB944C6215A0FE3008D46F9 /* GTableDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB944C5215A0FE3008D46F9 /* GTableDataProvider.m */; };
+		0DB944CA215A1490008D46F9 /* GTableDelegateContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB944C9215A1490008D46F9 /* GTableDelegateContainer.m */; };
 		0DEEA2A2211B3E9200118084 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A1211B3E9200118084 /* AppDelegate.m */; };
 		0DEEA2A5211B3E9200118084 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A4211B3E9200118084 /* ViewController.m */; };
 		0DEEA2A8211B3E9200118084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A6211B3E9200118084 /* Main.storyboard */; };
 		0DEEA2AA211B3E9300118084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A9211B3E9300118084 /* Assets.xcassets */; };
 		0DEEA2AD211B3E9300118084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEEA2AB211B3E9300118084 /* LaunchScreen.storyboard */; };
 		0DEEA2B0211B3E9300118084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2AF211B3E9300118084 /* main.m */; };
+		0DEEA2B8211B40C900118084 /* OtherTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2B7211B40C900118084 /* OtherTestView.m */; };
+		0DEEA2BA211B40D600118084 /* OtherTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEEA2B9211B40D600118084 /* OtherTestView.xib */; };
+		33B6E6F13A43FE689836385C /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC6BDC23526BDA28EED3F9E /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3D388821280F2E00EB609A /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		0D3D388921280F2E00EB609A /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		0DB88610215A0D38006F2A72 /* UITableView+GTableStatic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+GTableStatic.h"; sourceTree = "<group>"; };
+		0DB88611215A0D38006F2A72 /* UITableView+GTableStatic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GTableStatic.m"; sourceTree = "<group>"; };
+		0DB88613215A0DE1006F2A72 /* GTableSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableSection.h; sourceTree = "<group>"; };
+		0DB88614215A0DE1006F2A72 /* GTableSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableSection.m; sourceTree = "<group>"; };
+		0DB88616215A0DFB006F2A72 /* GTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableCell.h; sourceTree = "<group>"; };
+		0DB88617215A0DFB006F2A72 /* GTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableCell.m; sourceTree = "<group>"; };
+		0DB944C4215A0FE3008D46F9 /* GTableDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableDataProvider.h; sourceTree = "<group>"; };
+		0DB944C5215A0FE3008D46F9 /* GTableDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableDataProvider.m; sourceTree = "<group>"; };
+		0DB944C7215A1024008D46F9 /* GTableKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableKit.h; sourceTree = "<group>"; };
+		0DB944C8215A1490008D46F9 /* GTableDelegateContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableDelegateContainer.h; sourceTree = "<group>"; };
+		0DB944C9215A1490008D46F9 /* GTableDelegateContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableDelegateContainer.m; sourceTree = "<group>"; };
 		0DEEA29D211B3E9200118084 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEEA2A0211B3E9200118084 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DEEA2A1211B3E9200118084 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +48,12 @@
 		0DEEA2AC211B3E9300118084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DEEA2AE211B3E9300118084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DEEA2AF211B3E9300118084 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DEEA2B6211B40C900118084 /* OtherTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherTestView.h; sourceTree = "<group>"; };
+		0DEEA2B7211B40C900118084 /* OtherTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherTestView.m; sourceTree = "<group>"; };
+		0DEEA2B9211B40D600118084 /* OtherTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTestView.xib; sourceTree = "<group>"; };
+		6DC6BDC23526BDA28EED3F9E /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		770255AF189D167D10F0DBD3 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		FADB22B78CE6AE01C779102D /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +61,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B6E6F13A43FE689836385C /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB88609215A07FC006F2A72 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				0DB8860A215A0C03006F2A72 /* GTableView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		0DB8860A215A0C03006F2A72 /* GTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0DB88610215A0D38006F2A72 /* UITableView+GTableStatic.h */,
+				0DB88611215A0D38006F2A72 /* UITableView+GTableStatic.m */,
+				0DB944C8215A1490008D46F9 /* GTableDelegateContainer.h */,
+				0DB944C9215A1490008D46F9 /* GTableDelegateContainer.m */,
+				0DB944C4215A0FE3008D46F9 /* GTableDataProvider.h */,
+				0DB944C5215A0FE3008D46F9 /* GTableDataProvider.m */,
+				0DB88613215A0DE1006F2A72 /* GTableSection.h */,
+				0DB88614215A0DE1006F2A72 /* GTableSection.m */,
+				0DB88616215A0DFB006F2A72 /* GTableCell.h */,
+				0DB88617215A0DFB006F2A72 /* GTableCell.m */,
+				0DB944C7215A1024008D46F9 /* GTableKit.h */,
+			);
+			path = GTableView;
+			sourceTree = "<group>";
+		};
 		0DEEA294211B3E9200118084 = {
 			isa = PBXGroup;
 			children = (
 				0DEEA29F211B3E9200118084 /* Demo */,
 				0DEEA29E211B3E9200118084 /* Products */,
+				94E42A73BD58458C0EDC78E5 /* Pods */,
+				8788EF7DB289E8B70FE933F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +115,16 @@
 		0DEEA29F211B3E9200118084 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0DB88609215A07FC006F2A72 /* Vendor */,
 				0DEEA2A0211B3E9200118084 /* AppDelegate.h */,
 				0DEEA2A1211B3E9200118084 /* AppDelegate.m */,
 				0DEEA2A3211B3E9200118084 /* ViewController.h */,
 				0DEEA2A4211B3E9200118084 /* ViewController.m */,
+				0D3D388821280F2E00EB609A /* TestViewController.h */,
+				0D3D388921280F2E00EB609A /* TestViewController.m */,
+				0DEEA2B6211B40C900118084 /* OtherTestView.h */,
+				0DEEA2B7211B40C900118084 /* OtherTestView.m */,
+				0DEEA2B9211B40D600118084 /* OtherTestView.xib */,
 				0DEEA2A6211B3E9200118084 /* Main.storyboard */,
 				0DEEA2A9211B3E9300118084 /* Assets.xcassets */,
 				0DEEA2AB211B3E9300118084 /* LaunchScreen.storyboard */,
@@ -71,6 +134,23 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		8788EF7DB289E8B70FE933F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DC6BDC23526BDA28EED3F9E /* libPods-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94E42A73BD58458C0EDC78E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				770255AF189D167D10F0DBD3 /* Pods-Demo.debug.xcconfig */,
+				FADB22B78CE6AE01C779102D /* Pods-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DEEA2B3211B3E9300118084 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				14F87CC4D10F4C50BE504403 /* [CP] Check Pods Manifest.lock */,
 				0DEEA299211B3E9200118084 /* Sources */,
 				0DEEA29A211B3E9200118084 /* Frameworks */,
 				0DEEA29B211B3E9200118084 /* Resources */,
@@ -128,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEEA2BA211B40D600118084 /* OtherTestView.xib in Resources */,
 				0DEEA2AD211B3E9300118084 /* LaunchScreen.storyboard in Resources */,
 				0DEEA2AA211B3E9300118084 /* Assets.xcassets in Resources */,
 				0DEEA2A8211B3E9200118084 /* Main.storyboard in Resources */,
@@ -136,14 +218,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14F87CC4D10F4C50BE504403 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DEEA299211B3E9200118084 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEEA2B8211B40C900118084 /* OtherTestView.m in Sources */,
 				0DEEA2A5211B3E9200118084 /* ViewController.m in Sources */,
+				0DB88618215A0DFB006F2A72 /* GTableCell.m in Sources */,
 				0DEEA2B0211B3E9300118084 /* main.m in Sources */,
 				0DEEA2A2211B3E9200118084 /* AppDelegate.m in Sources */,
+				0DB944CA215A1490008D46F9 /* GTableDelegateContainer.m in Sources */,
+				0DB944C6215A0FE3008D46F9 /* GTableDataProvider.m in Sources */,
+				0D3D388A21280F2E00EB609A /* TestViewController.m in Sources */,
+				0DB88615215A0DE1006F2A72 /* GTableSection.m in Sources */,
+				0DB88612215A0D38006F2A72 /* UITableView+GTableStatic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,11 +391,13 @@
 		};
 		0DEEA2B4211B3E9300118084 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770255AF189D167D10F0DBD3 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CB47K9F6J;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +410,13 @@
 		};
 		0DEEA2B5211B3E9300118084 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FADB22B78CE6AE01C779102D /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CB47K9F6J;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
