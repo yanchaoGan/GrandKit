@@ -13,26 +13,15 @@
 @end
 
 
-@interface NSObject (crash)
-
-@end
-
-@implementation NSObject (crash)
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
-    return nil;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-}
-
-@end
-
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *a  = @"123";
+    NSString *b = a;
+    a = @"456";
     
     return YES;
 }

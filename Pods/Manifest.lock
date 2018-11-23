@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 7c406705f9d5b4de3cefaa49168c2950a0a3cde7
+PODS:
+  - ReactiveObjC (3.0.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - ReactiveObjC (~> 3.0.0)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReactiveObjC
+    - YYKit
+
+SPEC CHECKSUMS:
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 72e31b361f3bdc85ce204c95b48b72d8cba7921f
 
 COCOAPODS: 1.5.3
