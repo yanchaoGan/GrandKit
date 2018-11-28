@@ -6,6 +6,10 @@
 //  Copyright © 2018年 G.Y. All rights reserved.
 //
 
+/*
+ thanks to zhn张辉男
+ */
+
 #import <UIKit/UIKit.h>
 #import "GTableKit.h"
 

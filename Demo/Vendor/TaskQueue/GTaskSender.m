@@ -11,7 +11,9 @@
 
 #import <objc/runtime.h>
 
-@interface GTaskSender ()
+@interface GTaskSender () {
+    dispatch_queue_t _queue;
+}
 
 @property (nonatomic, strong) GTaskConfig *config;
 @property (nonatomic, strong) NSMutableArray<void(^)(GTaskReciever *)> *tasks;
@@ -60,12 +62,20 @@ GTaskSender * GFirstly(void (^block)(GTaskConfig *config)) {
     void (^rt)(id block) =
     ^(id block){
         self.finalBlock = block;
-        [self startDispatch];
+        [self dispatchOnQueue];
     };
     return rt;
 }
 
 //MARK:- Private
+
+- (void)dispatchOnQueue {
+    dispatch_queue_t queue = dispatch_queue_create("task.dispatch.queue", DISPATCH_QUEUE_SERIAL);
+    _queue = queue;
+    dispatch_async(queue, ^{
+        [self startDispatch];
+    });
+}
 
 - (void)startDispatch {
     
@@ -79,43 +89,54 @@ GTaskSender * GFirstly(void (^block)(GTaskConfig *config)) {
         void(^recieverHandle)(GTaskReciever *);
         recieverHandle = handle;
         GTaskReciever *reciever = GTaskReciever.alloc.init;
-         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                       ^{
-                          
-                           recieverHandle(reciever);
-                       });
+        
         
         objc_setAssociatedObject(recieverHandle, &"reciever", reciever, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
         objc_setAssociatedObject(reciever, &"sender", self, OBJC_ASSOCIATION_ASSIGN);
         
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                       ^{
+                           
+                           recieverHandle(reciever);
+                       });
         dispatch_semaphore_wait(sp, DISPATCH_TIME_FOREVER);
     }
-    
     //invoke finally block
-    
+    for (int i = 0; i < count - 0; i++) {
+        dispatch_semaphore_wait(sp, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_signal(sp);
+    }
+
     NSInvocation* invocation = [NSInvocation invocationWithBlock:self.finalBlock];
+    
+    NSInteger originCount = invocation.methodSignature.numberOfArguments;
+    //block 比正常 类对象 方法少1
+    NSAssert(originCount - 1 == self.tasks.count, @"接受参数个数必须等于task 数量");
     
     for (int i = 0; i < self.tasks.count; i++) {
         id handle = self.tasks[i];
         GTaskReciever *reciever = objc_getAssociatedObject(handle, &"reciever");
         if (reciever.data) {
-            [invocation setArgument:(void *)(reciever.data) atIndex:i + 1];
+            NSString *name = reciever.data; //for tmp
+            [invocation setArgument:&name atIndex:i + 1];
         }
         else {
-//            [invocation setArgument:(void *)[NSNull null] atIndex:i + 1];
         }
     }
-    
-    [invocation invoke];
-    
-    
+    self.tasks = @[].mutableCopy;
+    dispatch_async(dispatch_get_main_queue(), ^{
+       [invocation invoke];
+    });
 }
 
 
 //MARK:- Getter
 - (dispatch_semaphore_t)privateSemap {
     return self.semp;
+}
+- (NSInteger)taskCount {
+    return self.tasks.count;
 }
 
 @end

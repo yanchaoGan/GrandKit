@@ -13,6 +13,7 @@
 
 @interface GTaskSender (Private)
 - (dispatch_semaphore_t)privateSemap;
+- (NSInteger)taskCount;
 @end
 
 @implementation GTaskSender (Private)
@@ -23,13 +24,21 @@
 
 - (void)sendNextData:(id)data {
     _data = data;
-    
-    GTaskSender *sender  = objc_getAssociatedObject(self, &"sender");
+    GTaskSender *sender = [self ownSender];
     dispatch_semaphore_signal(sender.privateSemap);
 }
 
 - (void)sendCompleted {
-    
+    GTaskSender *sender = [self ownSender];
+    for (int i = 0; i < sender.taskCount; i ++) {
+        dispatch_semaphore_wait(sender.privateSemap, DISPATCH_TIME_FOREVER);
+    }
+}
+
+//MARK:- Getter
+- (GTaskSender *)ownSender {
+    GTaskSender *sender  = objc_getAssociatedObject(self, &"sender");
+    return sender;
 }
 
 @end

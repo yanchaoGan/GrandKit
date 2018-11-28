@@ -38,23 +38,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    KeyBoardUtil.shared.keyboard_enable = YES;
-    self.kb_enable = YES;
-    
     GFirstly(^(GTaskConfig *config) {
-        config.concurrentCount = 1;
-    }).then(^(GTaskReciever *reciever){
-        NSLog(@"123");
-        [reciever sendNextData:nil];
-    }).then(^(GTaskReciever *reciever){
-        NSLog(@"567");
-        [reciever sendNextData:nil];
-    }).
-    finally(^(id data, id data1){
-        NSLog(@"finally");
+        config.concurrentCount = 2;
+    })
+    .then(^(GTaskReciever *reciever){
+        //mock any task. eg net work, io ...
+        if (arc4random()%2 == 0) {
+            NSLog(@"sleep");
+            sleep(3);
+        }
+        NSString * index = @(1).stringValue;
+        NSLog(index);
+        [reciever sendNextData:index];
+        //if you send completed , queue will be pause
+        //            [reciever sendCompleted];
+    })
+    .then(^(GTaskReciever *reciever){
+        NSString * index = @(2).stringValue;
+        NSLog(index);
+        [reciever sendNextData:index];
+    })
+    .finally(^(id data1, id data2){
+        NSLog(@"finally %@, %@",data1,data2);
     });
     
     return;//
+    
+    KeyBoardUtil.shared.keyboard_enable = YES;
+    self.kb_enable = YES;
+    
+    return;
+    
     UITableView *tv = [UITableView.alloc initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:tv];
     

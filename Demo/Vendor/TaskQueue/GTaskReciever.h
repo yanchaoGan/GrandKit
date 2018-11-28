@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) id data;
 - (void)sendNextData:(id)data;
 
-- (void)sendCompleted; //nt 想结束一个sender queue
+//nt 想结束一个sender queue
+//with issue
+//- (void)sendCompleted;
 
 @end
 
