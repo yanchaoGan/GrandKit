@@ -16,6 +16,8 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "KeyBoardUtil.h"
 
+#import "GTaskSender.h"
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
@@ -38,6 +40,19 @@
     
     KeyBoardUtil.shared.keyboard_enable = YES;
     self.kb_enable = YES;
+    
+    GFirstly(^(GTaskConfig *config) {
+        config.concurrentCount = 1;
+    }).then(^(GTaskReciever *reciever){
+        NSLog(@"123");
+        [reciever sendNextData:nil];
+    }).then(^(GTaskReciever *reciever){
+        NSLog(@"567");
+        [reciever sendNextData:nil];
+    }).
+    finally(^(id data, id data1){
+        NSLog(@"finally");
+    });
     
     return;//
     UITableView *tv = [UITableView.alloc initWithFrame:self.view.bounds style:UITableViewStylePlain];

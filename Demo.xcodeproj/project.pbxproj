@@ -15,6 +15,10 @@
 		0DB88D3F219BE90F009298BF /* UIView+KeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB88D3E219BE90F009298BF /* UIView+KeyBoard.m */; };
 		0DB944C6215A0FE3008D46F9 /* GTableDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB944C5215A0FE3008D46F9 /* GTableDataProvider.m */; };
 		0DB944CA215A1490008D46F9 /* GTableDelegateContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB944C9215A1490008D46F9 /* GTableDelegateContainer.m */; };
+		0DCF320A21AE236D007EBA5F /* GTaskSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF320921AE236D007EBA5F /* GTaskSender.m */; };
+		0DCF320D21AE2470007EBA5F /* GTaskReciever.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF320C21AE2470007EBA5F /* GTaskReciever.m */; };
+		0DCF321321AE26F2007EBA5F /* GTaskConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF321221AE26F2007EBA5F /* GTaskConfig.m */; };
+		0DCF321621AEA984007EBA5F /* NSInvocation+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF321421AEA984007EBA5F /* NSInvocation+Block.m */; };
 		0DEEA2A2211B3E9200118084 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A1211B3E9200118084 /* AppDelegate.m */; };
 		0DEEA2A5211B3E9200118084 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A4211B3E9200118084 /* ViewController.m */; };
 		0DEEA2A8211B3E9200118084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEEA2A6211B3E9200118084 /* Main.storyboard */; };
@@ -44,6 +48,14 @@
 		0DB944C7215A1024008D46F9 /* GTableKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableKit.h; sourceTree = "<group>"; };
 		0DB944C8215A1490008D46F9 /* GTableDelegateContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableDelegateContainer.h; sourceTree = "<group>"; };
 		0DB944C9215A1490008D46F9 /* GTableDelegateContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableDelegateContainer.m; sourceTree = "<group>"; };
+		0DCF320821AE236D007EBA5F /* GTaskSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTaskSender.h; sourceTree = "<group>"; };
+		0DCF320921AE236D007EBA5F /* GTaskSender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTaskSender.m; sourceTree = "<group>"; };
+		0DCF320B21AE2470007EBA5F /* GTaskReciever.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTaskReciever.h; sourceTree = "<group>"; };
+		0DCF320C21AE2470007EBA5F /* GTaskReciever.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTaskReciever.m; sourceTree = "<group>"; };
+		0DCF321121AE26F2007EBA5F /* GTaskConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTaskConfig.h; sourceTree = "<group>"; };
+		0DCF321221AE26F2007EBA5F /* GTaskConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTaskConfig.m; sourceTree = "<group>"; };
+		0DCF321421AEA984007EBA5F /* NSInvocation+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Block.m"; sourceTree = "<group>"; };
+		0DCF321521AEA984007EBA5F /* NSInvocation+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Block.h"; sourceTree = "<group>"; };
 		0DEEA29D211B3E9200118084 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEEA2A0211B3E9200118084 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DEEA2A1211B3E9200118084 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +89,7 @@
 		0DB88609215A07FC006F2A72 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				0DCF320721AD9667007EBA5F /* TaskQueue */,
 				0DB88D3C219BE88A009298BF /* KeyBoard */,
 				0DB8860A215A0C03006F2A72 /* GTableView */,
 			);
@@ -110,6 +123,29 @@
 				0DB88D3E219BE90F009298BF /* UIView+KeyBoard.m */,
 			);
 			path = KeyBoard;
+			sourceTree = "<group>";
+		};
+		0DCF320721AD9667007EBA5F /* TaskQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0DCF321721AEA988007EBA5F /* Depend */,
+				0DCF320821AE236D007EBA5F /* GTaskSender.h */,
+				0DCF320921AE236D007EBA5F /* GTaskSender.m */,
+				0DCF320B21AE2470007EBA5F /* GTaskReciever.h */,
+				0DCF320C21AE2470007EBA5F /* GTaskReciever.m */,
+				0DCF321121AE26F2007EBA5F /* GTaskConfig.h */,
+				0DCF321221AE26F2007EBA5F /* GTaskConfig.m */,
+			);
+			path = TaskQueue;
+			sourceTree = "<group>";
+		};
+		0DCF321721AEA988007EBA5F /* Depend */ = {
+			isa = PBXGroup;
+			children = (
+				0DCF321521AEA984007EBA5F /* NSInvocation+Block.h */,
+				0DCF321421AEA984007EBA5F /* NSInvocation+Block.m */,
+			);
+			path = Depend;
 			sourceTree = "<group>";
 		};
 		0DEEA294211B3E9200118084 = {
@@ -262,8 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCF321621AEA984007EBA5F /* NSInvocation+Block.m in Sources */,
+				0DCF321321AE26F2007EBA5F /* GTaskConfig.m in Sources */,
 				0DEEA2B8211B40C900118084 /* OtherTestView.m in Sources */,
 				0DEEA2A5211B3E9200118084 /* ViewController.m in Sources */,
+				0DCF320A21AE236D007EBA5F /* GTaskSender.m in Sources */,
+				0DCF320D21AE2470007EBA5F /* GTaskReciever.m in Sources */,
 				0DB88618215A0DFB006F2A72 /* GTableCell.m in Sources */,
 				0DEEA2B0211B3E9300118084 /* main.m in Sources */,
 				0DEEA2A2211B3E9200118084 /* AppDelegate.m in Sources */,
